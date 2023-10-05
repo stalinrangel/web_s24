@@ -15,6 +15,43 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
     />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Khula:wght@700&display=swap">
+    <script>
+      enviar = function(e) {   
+        //alert('enviar');
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var phone = document.getElementById('phone').value;
+        var msg = document.getElementById('msg').value;
+        console.log(name);
+        console.log(email);
+        console.log(phone);
+        console.log(msg);
+        //https://service24.app/alinstanteAPI/public/subcategorias/7/productos
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', encodeURI('https://service24.app/apii/public/usuarios/webcontacto/'+email+'?name='+name+'&phone='+phone+'&msg='+msg));
+        xhr.onload = function() {
+            console.log(xhr.response);
+        };
+        xhr.send();
+        alert('¡Pronto te contactaremos!');
+      }
+
+      enviar_proveedor = function(e) {
+          //alert('enviar_proveedor');
+          var email_proveedor = document.getElementById('email_proveedor').value;
+          var name = '';
+          var phone = '';
+          var msg = '';
+          //alert(email_proveedor);
+          var xhr = new XMLHttpRequest();
+          xhr.open('GET', encodeURI('https://service24.app/apii/public/usuarios/webcontactoproveedor/'+email_proveedor+'?name='+name+'&phone='+phone+'&msg='+msg));
+          xhr.onload = function() {
+              console.log(xhr.response);
+          };
+          xhr.send();
+          alert('¡Pronto te contactaremos!');
+      }
+    </script>
   </head>
   <body>
     <div class="mobile">
@@ -359,9 +396,9 @@
                           alt=""
                           src="./public/divider.svg"
                         />
-
+                        <input type="email" id="email_proveedor" placeholder="Correo electrónico" style="border: 0;height: 27px;">
                         <div class="text6">
-                          <span>Correo electrónico</span>
+                          <span></span>
                         </div>
                       </div>
                       <img
@@ -376,7 +413,7 @@
               </div>
               <div class="button">
                 <div class="button-base">
-                  <div class="text7">Enviar</div>
+                  <div class="text7" onclick="enviar_proveedor();">Enviar</div>
                 </div>
               </div>
             </div>
@@ -422,8 +459,9 @@
                             alt=""
                             src="./public/divider.svg"
                           />
-
-                          <div class="text6">First name</div>
+                          <input type="email" id="name" placeholder="Nombre" style="border: 0;">
+                                  
+                          <div class="text6"></div>
                         </div>
                         <img
                           class="help-icon"
@@ -448,8 +486,9 @@
                             alt=""
                             src="./public/divider.svg"
                           />
-
-                          <div class="text6">Last name</div>
+                          <input type="email"  placeholder="Apellido" style="border: 0;">
+                                  
+                          <div class="text6"></div>
                         </div>
                         <img
                           class="help-icon"
@@ -474,8 +513,9 @@
                             alt=""
                             src="./public/divider.svg"
                           />
-
-                          <div class="text6">you@company.com</div>
+                          <input type="text" id="email" placeholder="you@company.com" style="border: 0;">
+                                
+                          <div class="text6"></div>
                         </div>
                         <img
                           class="help-icon"
@@ -503,7 +543,9 @@
                           />
                         </div>
                         <div class="text-input">
-                          <div class="text6">+1 (555) 000-0000</div>
+                          <input type="number" id="phone" placeholder="+598 000-0000" style="border: 0;">
+                                
+                          <div class="text6"></div>
                           <img
                             class="help-icon"
                             alt=""
@@ -522,7 +564,9 @@
                     <div class="textarea-input-field-base">
                       <div class="label1">Mensaje</div>
                       <div class="input5">
-                        <div class="text12">Include a message...</div>
+                        <textarea type="text" id="msg" placeholder="Incluye un mensaje..." style="border: 0; width: 100%; height: 100%;" ></textarea>
+                              
+                        <div class="text12"></div>
                       </div>
                     </div>
                     <div class="hint-text">
@@ -542,7 +586,7 @@
               <div class="actions">
                 <div class="button1">
                   <div class="button-base1">
-                    <div class="text7">Enviar mensaje</div>
+                    <div class="text7"  onclick="enviar();">Enviar mensaje</div>
                   </div>
                 </div>
               </div>

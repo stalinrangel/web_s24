@@ -18,9 +18,11 @@
     <script type="text/javascript">
       if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
           window.location.href = "/mobile";
+      }else{
+        window.location.href = "/";
       }
       enviar = function(e) {   
-        alert('enviar');
+        //alert('enviar');
         var name = document.getElementById('name').value;
         var email = document.getElementById('email').value;
         var phone = document.getElementById('phone').value;
@@ -40,12 +42,12 @@
       }
 
       enviar_proveedor = function(e) {
-          alert('enviar_proveedor');
+          //alert('enviar_proveedor');
           var email_proveedor = document.getElementById('email_proveedor').value;
           var name = '';
           var phone = '';
           var msg = '';
-          alert(email_proveedor);
+          //alert(email_proveedor);
           var xhr = new XMLHttpRequest();
           xhr.open('GET', encodeURI('https://service24.app/apii/public/usuarios/webcontactoproveedor/'+email_proveedor+'?name='+name+'&phone='+phone+'&msg='+msg));
           xhr.onload = function() {
