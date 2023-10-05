@@ -1,0 +1,100 @@
+*{
+  font-family: 'Gilroy';
+}
+
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('fonts/Gilroy/Gilroy-Light.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GilroyBold';
+  src: url('fonts/Gilroy/Gilroy-ExtraBold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  /* fonts */
+  --text-xl-regular: Inter;
+  --font-gilroy: Gilroy;
+
+  /* font sizes */
+  --text-md-medium-size: 16px;
+  --text-sm-regular-size: 14px;
+  --text-xl-regular-size: 20px;
+  --font-size-5xs-5: 7.5px;
+  --font-size-31xl: 50px;
+  --font-size-3xs: 10px;
+
+  /* Colors */
+  --shades-white: #fff;
+  --primary-400: #fd682a;
+  --primary-100: #fdf4ee;
+  --primary-300: #f6cb93;
+  --gray-500: #667085;
+  --gray-300: #d0d5dd;
+  --color-darkslategray-100: #404040;
+  --gray-700: #344054;
+  --neutral-300: #7e8389;
+  --gray-900: #101828;
+  --neutral-400: #141518;
+  --secondary-blue-base-light: #f5fbff;
+  --neutral-200: #dae2e7;
+  --secondary-red: #e5343c;
+  --color-darkorange: #fb710e;
+  --color-silver: #c1c2c2;
+  --generic-black: #000;
+  --secondary-blue-medium: #daeeff;
+  --primary-600: #7f56d9;
+
+  /* Gaps */
+  --gap-13xl: 32px;
+  --gap-45xl: 64px;
+  --gap-5xl: 24px;
+  --gap-xs: 12px;
+  --gap-7xs: 6px;
+  --gap-5xs: 8px;
+  --gap-xl: 20px;
+  --gap-21xl: 40px;
+  --gap-base: 16px;
+  --gap-10xs-4: 2.4px;
+  --gap-9xs-2: 3.2px;
+
+  /* Paddings */
+  --padding-13xl: 32px;
+  --padding-81xl: 100px;
+  --padding-3xs: 10px;
+  --padding-xs: 12px;
+  --padding-xl: 20px;
+  --padding-sm: 14px;
+  --padding-base: 16px;
+  --padding-lg: 18px;
+  --padding-4xs: 9px;
+  --padding-8xs-7: 4.7px;
+  --padding-9xs: 4px;
+  --padding-6xs-3: 6.3px;
+  --padding-11xs: 2px;
+
+  /* Border radiuses */
+  --br-5xs: 8px;
+  --br-7xs: 6px;
+  --br-9xl: 28px;
+  --br-814xl-4: 833.4px;
+  --br-976xl-3: 995.3px;
+  --br-3xs-6: 9.6px;
+  --br-6xs: 7px;
+  --br-8xs: 5px;
+  --br-980xl: 999px;
+
+  /* Effects */
+  --shadow-medium: 0px 4px 6px -1px rgba(16, 24, 40, 0.1),
+    0px 2px 4px -2px rgba(16, 24, 40, 0.1);
+  --shadow-xs: 0px 1px 2px rgba(16, 24, 40, 0.05);
+}

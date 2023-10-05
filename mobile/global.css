@@ -1,0 +1,109 @@
+*{
+  font-family: 'Gilroy';
+}
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+.GilroyBold{
+  font-family: GilroyBold;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('fonts/Gilroy/Gilroy-Light.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GilroyBold';
+  src: url('fonts/Gilroy/Gilroy-ExtraBold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  /* fonts */
+  --text-lg-regular: Inter;
+  --font-gilroy: Gilroy;
+
+  /* font sizes */
+  --text-md-medium-size: 16px;
+  --text-sm-semibold-size: 14px;
+  --text-xs-medium-size: 12px;
+  --text-lg-regular-size: 18px;
+  --font-size-17xl: 36px;
+  --font-size-11xl: 30px;
+  --font-size-8xs-2: 4.2px;
+  --text-xl-medium-size: 20px;
+  --font-size-3xs: 10px;
+
+  /* Colors */
+  --shades-white: #fff;
+  --primary-400: #fd682a;
+  --primary-300: #f6cb93;
+  --gray-500: #667085;
+  --gray-400: #98a2b3;
+  --success-50: #ecfdf3;
+  --success-700: #027a48;
+  --gray-300: #d0d5dd;
+  --gray-700: #344054;
+  --neutral-300: #7e8389;
+  --gray-900: #101828;
+  --neutral-400: #141518;
+  --secondary-blue-base-light: #f5fbff;
+  --neutral-200: #dae2e7;
+  --secondary-red: #e5343c;
+  --color-darkorange: #fb710e;
+  --color-silver: #c1c2c2;
+  --generic-black: #000;
+  --gray-100: #f2f4f7;
+  --secondary-blue-medium: #daeeff;
+  --primary-600: #7f56d9;
+  --primary-50: #f9f5ff;
+  --primary-700: #6941c6;
+
+  /* Gaps */
+  --gap-29xl: 48px;
+  --gap-13xl: 32px;
+  --gap-5xl: 24px;
+  --gap-base: 16px;
+  --gap-xs: 12px;
+  --gap-5xs: 8px;
+  --gap-7xs: 6px;
+  --gap-21xl: 40px;
+  --gap-11xs-3: 1.3px;
+  --gap-9xs: 4px;
+  --gap-9xs-2: 3.2px;
+
+  /* Paddings */
+  --padding-base: 16px;
+  --padding-11xs: 2px;
+  --padding-5xs: 8px;
+  --padding-45xl: 64px;
+  --padding-xs: 12px;
+  --padding-xl: 20px;
+  --padding-3xs: 10px;
+  --padding-sm: 14px;
+  --padding-lg: 18px;
+  --padding-8xs: 5px;
+  --padding-10xs-6: 2.6px;
+  --padding-6xs-3: 6.3px;
+
+  /* Border radiuses */
+  --br-base: 16px;
+  --br-5xs: 8px;
+  --br-7xs: 6px;
+  --br-9xl: 28px;
+  --br-387xl-7: 406.7px;
+  --br-466xl-7: 485.7px;
+  --br-8xs-7: 4.7px;
+  --br-6xs: 7px;
+  --br-8xs: 5px;
+  --br-980xl: 999px;
+
+  /* Effects */
+  --shadow-xs: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  --shadow-medium: 0px 4px 6px -1px rgba(16, 24, 40, 0.1),
+    0px 2px 4px -2px rgba(16, 24, 40, 0.1);
+}
