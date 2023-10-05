@@ -2,6 +2,10 @@ a{
   text-decoration: none !important;
   color: var(--gray-400) !important;
 }
+.menu_letras{
+  text-decoration: none !important;
+  color: var(--gray-400) !important;
+}
 .cursor{
   cursor:pointer;
 }
