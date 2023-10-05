@@ -31,7 +31,7 @@
         console.log(msg);
         //https://service24.app/alinstanteAPI/public/subcategorias/7/productos
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', encodeURI('https://service24.app/api/public/usuarios/webcontacto/'+email+'?name='+name+'&phone='+phone+'&msg='+msg));
+        xhr.open('GET', encodeURI('https://service24.app/apii/public/usuarios/webcontacto/'+email+'?name='+name+'&phone='+phone+'&msg='+msg));
         xhr.onload = function() {
             console.log(xhr.response);
         };
@@ -42,9 +42,12 @@
       enviar_proveedor = function(e) {
           alert('enviar_proveedor');
           var email_proveedor = document.getElementById('email_proveedor').value;
+          var name = '';
+          var phone = '';
+          var msg = '';
           alert(email_proveedor);
           var xhr = new XMLHttpRequest();
-          xhr.open('GET', encodeURI('https://service24.app/api/public/usuarios/webcontactoproveedor/'+email_proveedor+'?name='+name+'&phone='+phone+'&msg='+msg));
+          xhr.open('GET', encodeURI('https://service24.app/apii/public/usuarios/webcontactoproveedor/'+email_proveedor+'?name='+name+'&phone='+phone+'&msg='+msg));
           xhr.onload = function() {
               console.log(xhr.response);
           };
@@ -112,7 +115,7 @@
             <div class="navigation" >
               <div class="button">
                 <div class="button-base">
-                  <div class="text cursor"><a href="#nosotros">Nosotross</a></div>
+                  <div class="text cursor"><a href="#nosotros">Nosotros</a></div>
                 </div>
               </div>
               <div class="dropdown-header-navigation-tri">
