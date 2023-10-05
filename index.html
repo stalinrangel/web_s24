@@ -21,6 +21,10 @@
       }else{
         window.location.href = "/";
       }
+
+      function google() {
+        window.open("https://play.google.com/store/apps/details?id=cliente.service24.app", "_blank");
+      }
       enviar = function(e) {   
         //alert('enviar');
         var name = document.getElementById('name').value;
@@ -168,11 +172,11 @@
             <p class="contratar-servicios">Descargalo ya en Apple y Android.</p>
           </span>
         </div>
-        <div class="mobile-app-store-badge-parent">
+        <div class="mobile-app-store-badge-parent"  onclick="google();">
           <img
             class="mobile-app-store-badge"
             alt=""
-            src="./public/mobile-app-store-badge.svg"
+            src="./public/mobile-app-store-badge.svg" 
           />
 
           <img
