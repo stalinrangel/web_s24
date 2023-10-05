@@ -15,46 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
     />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Khula:wght@700&display=swap">
-    <script>
-      function google() {
-        window.open("https://play.google.com/store/apps/details?id=cliente.service24.app", "_blank");
-      }
-      enviar = function(e) {   
-        //alert('enviar');
-        var name = document.getElementById('name').value;
-        var email = document.getElementById('email').value;
-        var phone = document.getElementById('phone').value;
-        var msg = document.getElementById('msg').value;
-        console.log(name);
-        console.log(email);
-        console.log(phone);
-        console.log(msg);
-        //https://service24.app/alinstanteAPI/public/subcategorias/7/productos
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', encodeURI('https://service24.app/apii/public/usuarios/webcontacto/'+email+'?name='+name+'&phone='+phone+'&msg='+msg));
-        xhr.onload = function() {
-            console.log(xhr.response);
-        };
-        xhr.send();
-        alert('¡Pronto te contactaremos!');
-      }
-
-      enviar_proveedor = function(e) {
-          //alert('enviar_proveedor');
-          var email_proveedor = document.getElementById('email_proveedor').value;
-          var name = '';
-          var phone = '';
-          var msg = '';
-          //alert(email_proveedor);
-          var xhr = new XMLHttpRequest();
-          xhr.open('GET', encodeURI('https://service24.app/apii/public/usuarios/webcontactoproveedor/'+email_proveedor+'?name='+name+'&phone='+phone+'&msg='+msg));
-          xhr.onload = function() {
-              console.log(xhr.response);
-          };
-          xhr.send();
-          alert('¡Pronto te contactaremos!');
-      }
-    </script>
+    
   </head>
   <body>
     <div class="mobile">
@@ -579,7 +540,7 @@
                 </div>
                 <div class="checkbox">
                   <div class="checkbox1">
-                    <div class="checkbox-base"></div>
+                    <input type="checkbox" id="myCheckbox" style="border: 1px solid var(--gray-300); color: var(--gray-300);">
                   </div>
                   <div class="text6">
                     Acepto las condiciones de la política de privacidad
@@ -1120,5 +1081,99 @@
         </div>
       </div>
     </div>
+    <script type="text/javascript">
+      if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+          window.location.href = "/mobile";
+      }else{
+        //window.location.href = "/";
+      }
+
+      function google() {
+        window.open("https://play.google.com/store/apps/details?id=cliente.service24.app", "_blank");
+      }
+      var ischeck=false;
+      const checkbox = document.getElementById('myCheckbox');
+      checkbox.addEventListener('click', function() {
+        console.log(1);
+        if (this.checked) {
+          console.log(this.value);
+          ischeck=true;
+        }else{
+          ischeck=false;
+        }
+      });
+      enviar = function(e) {   
+        //alert('enviar');
+        console.log(ischeck)
+        if (ischeck) {
+          
+          var name = document.getElementById('name').value;
+          var email = document.getElementById('email').value;
+          var phone = document.getElementById('phone').value;
+          var msg = document.getElementById('msg').value;
+          console.log(name);
+          console.log(email);
+          console.log(phone);
+          console.log(msg);
+          //https://service24.app/alinstanteAPI/public/subcategorias/7/productos
+          var xhr = new XMLHttpRequest();
+          xhr.open('GET', encodeURI('https://service24.app/apii/public/usuarios/webcontacto/'+email+'?name='+name+'&phone='+phone+'&msg='+msg));
+          xhr.onload = function() {
+              console.log(xhr.response);
+          };
+          xhr.send();
+          alert('¡Pronto te contactaremos!');
+        }else{
+          alert('Acepta las condiciones de uso.');
+        }
+      }
+
+      enviar_proveedor = function(e) {
+          //alert('enviar_proveedor');
+          var email_proveedor = document.getElementById('email_proveedor').value;
+          var name = '';
+          var phone = '';
+          var msg = '';
+          //alert(email_proveedor);
+          var xhr = new XMLHttpRequest();
+          xhr.open('GET', encodeURI('https://service24.app/apii/public/usuarios/webcontactoproveedor/'+email_proveedor+'?name='+name+'&phone='+phone+'&msg='+msg));
+          xhr.onload = function() {
+              console.log(xhr.response);
+          };
+          xhr.send();
+          alert('¡Pronto te contactaremos!');
+      }
+
+       /* var xhr1 = new XMLHttpRequest();
+          xhr1.open('GET', encodeURI('https://service24.app/apii/public/sistema/contacto?pais_id=1'));
+          xhr1.onload = function() {
+            //alert(xhr1.response);
+              //alert('2');
+              var contacto=JSON.parse(xhr1.response);
+              contacto=contacto.contacto;
+              //console.log(contacto);
+              //console.log(contacto.correo);
+              document.getElementById("direccion").innerHTML = contacto.direccion;
+              document.getElementById("correo").innerHTML = contacto.correo;
+              document.getElementById("telefono").innerHTML = contacto.telefono;
+          };
+          xhr1.send();
+
+
+        var xhr = new XMLHttpRequest();
+          xhr.open('GET', encodeURI('https://service24.app/apii/public/web_count?pais_id=2'));
+          xhr.onload = function() {
+            //alert(xhr.response);
+              var datos=JSON.parse(xhr.response);
+              console.log(datos);
+
+              document.getElementById("clientes").innerHTML = datos.clientes;
+              document.getElementById("proveedores").innerHTML = datos.proveedores;
+              document.getElementById("pedidos_finalizados").innerHTML = datos.pedidos_finalizados;
+              document.getElementById("descargas").innerHTML = datos.descargas;
+          };
+          xhr.send();*/
+
+    </script>
   </body>
 </html>
